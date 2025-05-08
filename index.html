@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="INNBC AI Agent is your personal research assistant developed by Innovative BioResearch. Search any argument in the medical literature and produce a scientific report!">
+  <meta name="keywords" content="INNBC AGENT, AI AGENT, Innovative BioResearch, medical search, PubMed, biomedical research">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Innovative BioResearch">
+  <meta property="og:title" content="INNBC AI AGENT">
+  <meta property="og:description" content="Perform queries in the medical literature and receive a report in a scientific format—title, abstract, introduction, results, conclusions, references">
+  <meta property="og:image" content="https://innbcagent.innovativebioresearch.com/assets/social.jpg">
+  <meta property="og:url" content="https://innbcagent.innovativebioresearch.com/">
+  <meta property="og:type" content="website">
+  <!-- Optional Twitter Card tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="INNBC AI AGENT">
+  <meta name="twitter:description" content="Perform queries in the medical literature and receive a report in a scientific format">
+  <meta name="twitter:image" content="https://innbcagent.innovativebioresearch.com/assets/social.jpg">
+  <!-- CHANGE: Updated title for clarity -->
+  <title>INNBC AI Agent - Biomedical Research Assistant</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+  <script src="https://cdn.sheetjs.com/xlsx-latest/xlsx.full.min.js"></script>
+  <!-- Add pdfmake and vfs_fonts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- CHANGE: Added container for Home button and title -->
+  <div class="header-container">
+    <!-- CHANGE: Added Home button linking to main site -->
+    <button id="home-button" onclick="window.location.href='https://www.innovativebioresearch.com/'">
+      <img src="/src/assets/home.png" alt="Home Icon"> Home
+    </button>
+  <h1>INNBC AI Agent - Research Assistant</h1>
+</div>
+  <div id="search-container">
+    <div class="input-button-container">
+      <input type="text" id="search-input" placeholder="Enter research topic (e.g., SupT1 cell infusion as an HIV therapy)">
+      <div class="button-container">
+        <button id="search-button">
+        <img src="/src/assets/search.png" alt="Search Icon"> Search Literature
+        </button>
+        <button id="clear-button">
+        <img src="/src/assets/broom.png" alt="Clear Icon"> Clear
+        </button>
+      </div>
+    </div>
+    <input type="file" id="pdf-upload" accept=".pdf,.xlsx" title="Upload PDF or XLSX for full text (optional)">
+  </div>
+  <!-- CHANGE: Added feedback div for partial results -->
+  <div id="feedback" class="feedback"></div>
+  <!-- CHANGE: Added dynamic progress bar -->
+  <div id="loading" role="status" aria-live="polite">
+    <span id="loading-text">Initializing...</span>
+    <div class="progress-bar">
+      <div class="progress-bar-fill" style="width: 0%"></div>
+    </div>
+  </div>
+  <div id="report">
+    <h2>INNBC AI Agent Scientific Report</h2>
+    <!-- CHANGE: Added Download PDF button -->
+    <button id="download-pdf">Download PDF</button>
+    <h3>Title</h3>
+    <p id="report-title"></p>
+    <h3>Abstract</h3>
+    <p id="report-abstract"></p>
+    <h3>Introduction</h3>
+    <p id="report-introduction"></p>
+    <h3>Results</h3>
+    <p id="report-results"></p>
+    <div id="results-images"></div>
+    <div id="results-table">
+      <h4>Extracted Data Table</h4>
+      <div id="data-table"></div>
+    </div>
+    <canvas id="graph"></canvas>
+    <h3>Conclusions</h3>
+    <p id="report-conclusions"></p>
+    <h3>References</h3>
+    <ul id="report-references"></ul>
+  </div>
+  <script type="module" src="script.js"></script>
+  <script type="module" src="src/plugin/innbcagent.js"></script>
+</body>
+</html>

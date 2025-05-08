@@ -1,0 +1,261 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px auto;
+  max-width: 900px;
+  background-color: #000000; /* #20558a */
+}
+
+h1 {
+  text-align: center;
+}
+
+#search-container {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.input-button-container {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+}
+
+#search-input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box; /* Added to include padding in width */
+}
+
+#pdf-upload {
+  padding: 10px;
+  margin: 0;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+
+#search-button,
+#clear-button {
+  padding: 10px 15px; /* Reduced from 20px to match #home-button, accommodate icon */
+  margin: 0 5px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  display: flex; /* Align icon and text */
+  align-items: center; /* Center vertically */
+  gap: 10px; /* Space between icon and text, matches #home-button */
+}
+
+#search-button img,
+#clear-button img {
+  width: 20px; /* Matches #home-button img */
+  height: 20px;
+}
+
+#search-button {
+  margin-left: 0;
+  background-color: #ff0000; /* Red, matches #home-button, #download-pdf */
+  color: black; /* Matches #home-button, #download-pdf */
+}
+#search-button:hover {
+  background-color: #e60000; /* Matches #home-button:hover */
+}
+
+#search-button:focus {
+  outline: 2px solid #ff0000;
+  outline-offset: 2px;
+}
+
+#clear-button {
+  margin-right: 0;
+  background-color: #6c757d; /* Professional gray for secondary action */
+  color: #ffffff; /* White text for contrast */
+}
+
+#clear-button:hover {
+  background-color: #5a6268; /* Slightly darker gray */
+}
+
+#clear-button:focus {
+  outline: 2px solid #6c757d;
+  outline-offset: 2px;
+}
+
+#report {
+  border: 1px solid #ccc;
+  padding: 20px;
+  display: none;
+  background-color: #ffffff; /* White background for report box */
+  color: #000000; /* Black text for report content */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#results-images img {
+  max-width: 100%;
+  margin: 10px 0;
+}
+
+#graph {
+  margin-top: 20px;
+  max-width: 100%;
+  background-color: #ffffff; /* Ensure canvas background is white */
+}
+
+#results-table {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: none;
+}
+
+#data-table {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 900px;
+  gap: 10px;
+}
+
+.table-column {
+  flex: 0 0 200px;
+  max-width: 200px;
+  min-width: 150px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.table-cell {
+  padding: 8px;
+  text-align: left;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+.table-cell.header {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+}
+
+.table-cell:hover,
+.table-column:hover .table-cell {
+  background: #f0f0f0;
+}
+
+#loading {
+  display: none;
+  font-style: italic;
+}
+
+/* CHANGE: Added styling for feedback message */
+.feedback {
+  color: red;
+  font-style: italic;
+  margin: 10px 0;
+  min-height: 20px; /* Ensure space is reserved */
+}
+
+/* CHANGE: Added styling for header container */
+.header-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* CHANGE: Added styling for Home button */
+#home-button {
+  position: absolute;
+  top: 0px; /* Aligns with <h1> Y-coordinate, matching body margin */
+  left: calc(50% - 410px); /* Aligns with left edge of #search-input in 900px container */
+  padding: 10px 15px;
+  font-size: 16px;
+  font-family: Arial, sans-serif; /* Matches body font */
+  font-weight: bold; /* CHANGE: Added to make "Home" text bold */
+  background-color: #ff0000; /* Red from your code */
+  color: black; /* White text, corrected from your comment */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 20; /* Above other elements */
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Icon-text spacing from your code */
+}
+
+#home-button img {
+  width: 20px;
+  height: 20px;
+}
+
+#home-button:hover {
+  background-color: #e60000; /* Slightly darker red on hover */
+}
+
+@media (max-width: 950px) {
+  #home-button {
+    left: 20px; /* Fallback to body margin on smaller screens */
+  }
+}
+/* CHANGE: Added styling for Download PDF button */
+#download-pdf {
+  padding: 10px 15px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  font-weight: bold; /* Matches Home button */
+  background-color: #ff0000; /* Matches Home button */
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  display: none; /* Hidden until report is generated */
+}
+
+#download-pdf:hover {
+  background-color: #e60000; /* Matches Home button hover */
+}
+
+#loading {
+  display: none;
+  font-style: italic;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#loading-text {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 12px;
+  background-color: #e0e0e0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: #ff0000; /* Matches button color */
+  transition: width 0.3s ease;
+}
