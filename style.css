@@ -27,7 +27,24 @@ h1 {
 #search-input {
   width: 100%;
   padding: 10px;
-  box-sizing: border-box; /* Added to include padding in width */
+  box-sizing: border-box;
+  background-color: #1c2526; /* Very dark grey, inspired by ChatGPT */
+  color: #ffffff; /* White text */
+  border: 1px solid #333333; /* Subtle dark border for contrast */
+  border-radius: 5px; /* Matches button border-radius for consistency */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle depth */
+  font-size: 16px; /* Matches button font-size */
+  font-family: Arial, sans-serif; /* Matches body */
+}
+
+#search-input::placeholder {
+  color: #cccccc; /* Light grey for placeholder text */
+  opacity: 1; /* Ensures visibility in all browsers */
+}
+
+#search-input:focus {
+  outline: 2px solid #ff0000; /* Matches #search-button:focus for consistency */
+  outline-offset: 2px;
 }
 
 #pdf-upload {
@@ -82,7 +99,7 @@ h1 {
 #clear-button {
   margin-right: 0;
   background-color: #6c757d; /* Professional gray for secondary action */
-  color: #ffffff; /* White text for contrast */
+  color: #000000; /* Black text for consistency */
 }
 
 #clear-button:hover {
@@ -154,11 +171,6 @@ h1 {
 .table-cell:hover,
 .table-column:hover .table-cell {
   background: #f0f0f0;
-}
-
-#loading {
-  display: none;
-  font-style: italic;
 }
 
 /* CHANGE: Added styling for feedback message */
@@ -234,28 +246,31 @@ h1 {
   display: none;
   font-style: italic;
   padding: 10px;
-  background-color: #f0f0f0;
-  border-radius: 5px;
+  background-color: #1c2526; /* Matches #search-input */
+  color: #ffffff; /* White text */
+  border: 1px solid #333333; /* Matches #search-input */
+  border-radius: 5px; /* Matches #search-input */
   text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Matches #search-input */
 }
 
 #loading-text {
   display: block;
   margin-bottom: 10px;
   font-size: 16px;
-  color: #333;
+  color: #ffffff; /* White text */
 }
 
 .progress-bar {
   width: 100%;
   height: 12px;
-  background-color: #e0e0e0;
+  background-color: #333333; /* Darker grey for dark theme */
   border-radius: 6px;
   overflow: hidden;
 }
 
 .progress-bar-fill {
   height: 100%;
-  background-color: #ff0000; /* Matches button color */
+  background-color: #ff0000; /* Retains red, matches buttons */
   transition: width 0.3s ease;
 }
