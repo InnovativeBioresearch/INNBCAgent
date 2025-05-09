@@ -21,10 +21,10 @@ The INNBC AI Agent is a scientist’s dream, delivering **lightweight, reliable,
 
 The INNBC AI Agent is tailor-made for the Bio x AI Hackathon’s mission to advance scientific discovery through AI and knowledge graphs:
 
-- **Scientific Outcomes ($75,000 Track)**: Creates **knowledge graphs** by synthesizing PubMed metadata, full-text, and PDF data, producing **novel hypotheses** through Grok’s AI analysis, accelerating translational research.
+- **Scientific Outcomes**: Creates **knowledge graphs** by synthesizing PubMed metadata, full-text, and PDF data, producing **novel hypotheses** through Grok’s AI analysis, accelerating translational research.
 - **Harnessing AI for Good**: Enhances reproducibility by structuring verifiable scientific claims, preserving context from PMC and user inputs in clear, visual reports.
 - **Transforming Scientific Systems**: Reimagines literature reviews with a **digitally native**, AI-powered workflow, bypassing legacy manual processes and complex CLI setups.
-- **Discretionary Prizes ($15,000 Track)**: Democratizes research with a **lightweight, accessible** tool that empowers scientists, aligning with DeSci’s open, transparent ecosystem.
+- **Discretionary Prizes**: Democratizes research with a **lightweight, accessible** tool that empowers scientists, aligning with DeSci’s open, transparent ecosystem.
 
 ## Try It Now
 
