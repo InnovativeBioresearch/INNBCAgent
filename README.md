@@ -4,7 +4,7 @@ Revolutionize bioresearch with the **INNBC AI Agent**, a **standalone, open-sour
 
 ## Why INNBC AI Agent? 🌟
 
-The INNBC AI Agent is a scientist’s dream, delivering **lightweight, reliable, and immediate** research power. Unlike bloated frameworks, this app is a streamlined, fully functioning solution designed for the Bio x AI Hackathon’s judging criteria, using minimal dependencies (PDF.js, Chart.js, pdfMake):
+The INNBC AI Agent is a scientist’s dream, delivering **lightweight, reliable, and immediate** research power. Unlike bloated frameworks, this app is a streamlined, fully functioning solution designed for the Bio x AI Hackathon’s judging criteria, using minimal dependencies bundled via CDN (PDF.js, Chart.js, pdfMake):
 
 - **Transformative Scientific Impact**: Synthesizes PubMed/PMC’s 3.4M+ open-access papers with user-uploaded PDFs, generating novel hypotheses and actionable insights using xAI’s Grok, the cutting-edge AI for scientific reasoning.
 - **Effortless Automation**: Instantly searches PubMed and PubMed Central, extracts full-text and numerical table data from PDFs, and automates literature reviews, saving researchers hours of manual work.
