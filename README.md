@@ -1,6 +1,6 @@
 # INNBC AI Agent: Your Lightweight, AI-Powered Bioresearch Ally 🚀
 
-Transform bioresearch with the **INNBC AI Agent**, a **standalone, open-source** tool that automates literature reviews, extracts insights from PubMed and PDFs, and delivers publication-ready scientific reports in seconds—no coding required. Built for the **Bio x AI Hackathon (April–June 2025)** by Innovative Bioresearch (author: Jonathan Fior), this app synthesizes data, generates novel hypotheses, and empowers scientists with a clean, production-ready solution using minimal dependencies (PDF.js, Chart.js, pdfMake). Try it now at [https://innbcagent.innovativebioresearch.com](https://innbcagent.innovativebioresearch.com) and join the DeSci revolution!
+Revolutionize bioresearch with the **INNBC AI Agent**, a **standalone, open-source** tool that automates literature reviews, extracts insights from PubMed and PDFs, and delivers publication-ready scientific reports in seconds—no coding, no dependencies, no hassle. Built from scratch for the **Bio x AI Hackathon (April–June 2025)** by Innovative Bioresearch (author: Jonathan Fior), this app synthesizes data, generates novel hypotheses, and empowers scientists with a clean, production-ready solution using minimal dependencies (PDF.js, Chart.js, pdfMake). Try it now at [https://innbcagent.innovativebioresearch.com](https://innbcagent.innovativebioresearch.com) and join the DeSci revolution!
 
 ## Why INNBC AI Agent? 🌟
 
