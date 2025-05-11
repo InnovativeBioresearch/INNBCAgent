@@ -34,5 +34,5 @@ Dive in at [https://innbcagent.innovativebioresearch.com](https://innbcagent.inn
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/InnovativeBioresearch/INNBCAgent.git
-   cd innbc-ai-agent
+   cd INNBCAgent
 
