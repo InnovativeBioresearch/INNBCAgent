@@ -28,7 +28,7 @@ The INNBC AI Agent is tailor-made for the Bio x AI Hackathon’s mission to adva
 
 ## Try It Now
 
-### Live Demo
+### Live App
 Dive in at [https://innbcagent.innovativebioresearch.com](https://innbcagent.innovativebioresearch.com)—**no setup, minimal dependencies**, just instant research power!
 ### Local Deployment (For Technical Exploration)
 1. **Clone the Repository**:
