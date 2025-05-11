@@ -33,6 +33,6 @@ Dive in at [https://innbcagent.innovativebioresearch.com](https://innbcagent.inn
 ### Local Deployment (For Technical Exploration)
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/InnovativeBioresearch/innbc-ai-agent.git
+   git clone https://github.com/InnovativeBioresearch/INNBCAgent.git
    cd innbc-ai-agent
 
