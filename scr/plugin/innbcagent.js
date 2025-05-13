@@ -11,7 +11,8 @@ export async function summarizePaper(content, query) {
         introduction: 'The task requires input data, but none was supplied.',
         results: 'No results available due to lack of input.',
         conclusions: 'No conclusions can be drawn without input.',
-        references: []
+        references: [],
+        nonMedicalQuery: false // NEW CHANGE MADE: Added nonMedicalQuery for empty input case, set to false
       });
     }
     
@@ -38,8 +39,8 @@ export async function summarizePaper(content, query) {
                   if applicable. If query terms are missing, note this in the abstract and conclusions, and use available data or general knowledge without 
                   fabricating results. Include detailed context (e.g., disease background, intervention mechanisms) and discuss limitations, potential side effects, 
                   and research gaps. If the query is non-biomedical (e.g., engineering, physics) or the provided input is irrelevant to the query, use general 
-                  knowledge to address the query, focusing on technical principles, historical developments, or applications relevant to the topic and note the 
-                  absence of query-specific data in the abstract and conclusions. Ensure JSON is valid, complete, and focused on the query. Return only the 
+                  knowledge to address the query, focusing on technical principles, historical developments, or applications relevant to the topic, set "nonMedicalQuery" to true, 
+                  and note the absence of query-specific data in the abstract and conclusions. Ensure JSON is valid, complete, and focused on the query. Return only the 
                   JSON object. Do not include word counts, metadata, or annotations in the generated text; return only the scientific report content in the JSON object.`
                   
                 },
