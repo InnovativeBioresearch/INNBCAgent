@@ -447,7 +447,13 @@ function renderReport(reportData) {
   
   const referencesList = document.getElementById('report-references');
   referencesList.innerHTML = '';
-  if (reportData.references.length > 0) {
+  if (reportData.nonMedicalQuery) { // NEW CHANGE MADE: Check nonMedicalQuery to display message
+    const li = document.createElement('li');
+    li.textContent = 'This is a non-medical query, and the response was generated using general knowledge.';
+    li.style.fontStyle = 'italic';
+    li.style.color = '#555';
+    referencesList.appendChild(li);    
+  } else if (reportData.references.length > 0) {
     reportData.references.forEach((ref, index) => {
       const li = document.createElement('li');
       li.textContent = `${index + 1}. ${ref}`;
@@ -678,12 +684,14 @@ async function handleSearch() {
     const reportData = JSON.parse(report);
 
     // Construct references directly from papers to ensure accuracy
-    const references = papers.map(p => {
+    const references = papers.length && !reportData.nonMedicalQuery // NEW CHANGE MADE: Only generate references if nonMedicalQuery is false
+        ? papers.map(p => {
       const authors = p.authors.length > 1 ? `${p.authors[0].split(' ')[0]} et al.` : p.authors[0];
       // Remove trailing period from title, if present
       const cleanedTitle = p.title.replace(/\.$/, '');
       return `${authors} (${p.pubdate}). ${cleanedTitle}. ${p.journal}. PMID: ${p.pmid}`;
-    });
+    })
+    : []; // NEW CHANGE MADE: Empty references array if nonMedicalQuery is true
 
     // Merge references into reportData
     reportData.references = references;
@@ -819,7 +827,10 @@ function downloadPDF() {
       } : { text: 'Graph (not available)', style: 'paragraph' },
       { text: 'Conclusions', style: 'sectionHeader' },
       { text: reportData.conclusions, style: 'paragraph' },
-      reportData.references.length > 0 ? [
+      reportData.nonMedicalQuery ? [ // NEW CHANGE MADE: Use nonMedicalQuery for PDF references
+      { text: 'References', style: 'sectionHeader' },
+        { text: 'This is a non-medical query, and the response was generated using general knowledge.', style: 'paragraph', italics: true }    
+      ] : reportData.references.length > 0 ? [
         { text: 'References', style: 'sectionHeader' },
         {
           ul: reportData.references.map(ref => ({ text: ref, style: 'paragraph' }))
