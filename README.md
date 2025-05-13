@@ -11,7 +11,7 @@ The INNBC AI Agent is a scientist’s dream, delivering **lightweight, reliable,
 - **Publication-Ready Reports**: Produces structured reports (Title, Abstract, Introduction, Results, Conclusions, References) with Grok-driven summaries and innovative conclusions, ready for research or publication.
 - **Stunning Visualizations**: Renders custom bar graphs with Chart.js for numerical table data, making complex biomedical data clear and accessible.
 - **Featherlight Technical Design**: Runs on a Linux/Nginx stack with secure HTTPS (Let’s Encrypt), integrating PubMed E-utilities and Grok APIs with robust retry logic and error handling for unmatched reliability.
-- **Scientist-Friendly Usability**: Offers a **no-coding-required**, browser-based interface at [https://innbcagent.innovativebioresearch.com](https://innbcagent.innovativebioresearch.com), eliminating eliminating CLI frustrations and setup barriers for instant research.
+- **Scientist-Friendly Usability**: Offers a **no-coding-required**, browser-based interface at [https://innbcagent.innovativebioresearch.com](https://innbcagent.innovativebioresearch.com), eliminating CLI frustrations and setup barriers for instant research.
 - **Open-Source Powerhouse**: Released under the **MIT License** with a public GitHub repository, clear documentation, and a structure for community contributions, fostering DeSci collaboration.
 - **Scalable & Sustainable**: Designed for large-scale datasets, with a modular architecture ready for new sources (e.g., bioRxiv) and minimal maintenance to ensure data quality and longevity.
 - **Seamless PDF Export**: Generates professional PDFs using pdfMake, enabling researchers to share insights effortlessly.
