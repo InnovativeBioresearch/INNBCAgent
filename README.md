@@ -36,3 +36,12 @@ Dive in at [https://innbcagent.innovativebioresearch.com](https://innbcagent.inn
    git clone https://github.com/InnovativeBioresearch/INNBCAgent.git
    cd INNBCAgent
 
+Where to place *.conf files in Linux/Nginx
+innbcagent.conf => /etc/nginx/conf.d
+nginx.conf => /etc/nginx
+default.conf => /etc/nginx/sites-available
+
+
+
+
+
