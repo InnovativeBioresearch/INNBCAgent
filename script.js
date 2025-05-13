@@ -692,7 +692,12 @@ async function handleSearch() {
       return `${authors} (${p.pubdate}). ${cleanedTitle}. ${p.journal}. PMID: ${p.pmid}`;
     })
     : []; // NEW CHANGE MADE: Empty references array if nonMedicalQuery is true
-
+  
+    // NEW CHANGE MADE: Add reference for uploaded file using full filename (including extension)
+    if (file) {
+      references.push(`Local file: ${file.name}`);
+    }
+  
     // Merge references into reportData
     reportData.references = references;
 
