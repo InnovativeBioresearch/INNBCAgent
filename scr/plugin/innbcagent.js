@@ -23,7 +23,7 @@ export async function summarizePaper(content, query) {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-              model: 'grok-3-mini-beta',
+              model: 'grok-3-mini',
               messages: [
                 {
                   role: 'system',
@@ -101,7 +101,7 @@ export async function extractTableData(text, query) {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        model: 'grok-3-mini-beta',
+        model: 'grok-3-mini',
         messages: [
           {
             role: 'system',
