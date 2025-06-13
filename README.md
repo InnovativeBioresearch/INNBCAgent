@@ -42,7 +42,7 @@ innbcagent.conf => /etc/nginx/conf.d
 
 nginx.conf => /etc/nginx
 
-default.conf => /etc/nginx/sites-available
+default.conf => /etc/nginx/sites-available (same conf file should also be in /sites-enabled)
 
 
 
